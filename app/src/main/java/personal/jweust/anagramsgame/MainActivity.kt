@@ -1,5 +1,6 @@
 package personal.jweust.anagramsgame
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         var clickedButton = v as Button
 
         clickedButton.isClickable = false
+        clickedButton.setTextColor((Color.parseColor("#808080")))
         userEntryString += clickedButton.text
         userEntryLabel.text = userEntryString.toUpperCase()
         println("Button clicked. UserEntryString: ${userEntryString}. Clicked button text: ${clickedButton.text}")
